@@ -28,10 +28,13 @@ LOG_SOURCE_STDERR = "stderr"
 
 def exec(command, *args):
     command_args = ['supervisorctl', command] + list(args)
-    output = subprocess.check_output(
-        command_args, stderr=subprocess.STDOUT).decode('utf-8')
-
-    return output.strip()
+    try:
+        output = subprocess.check_output(
+            command_args, stderr=subprocess.STDOUT).decode('utf-8')
+        return output.strip()
+    except subprocess.CalledProcessError as e:
+        error_message = e.output.decode('utf-8')
+        raise Exception(f"command failed with error: {error_message}")
 
 
 def get_processes():
