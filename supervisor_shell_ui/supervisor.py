@@ -41,7 +41,7 @@ def get_processes():
         output = e.output.decode('utf-8')
         exit_status = e.returncode
         if exit_status != 3:
-            raise Exception(f"Unexpected exit status: {exit_status}")
+            raise
 
     lines = output.strip().split('\n')
     processes = []
