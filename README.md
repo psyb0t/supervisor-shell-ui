@@ -99,6 +99,7 @@ supervisor-shell-ui
 
 - This application is intended for use on UNIX-like operating systems.
 - The application requires that the Supervisor program is already installed and properly configured on your system.
+- supervisor-shell-ui relies on `supervisorctl` under the hood. In order to run it from a non-root user, you will need to set appropriate permissions for the `supervisor.sock` file in the supervisor configuration.
 
 ## License
 
