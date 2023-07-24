@@ -279,10 +279,16 @@ def handle_input_key_enter_section_table():
 
 
 def handle_input_key_enter():
+    global last_action_output
     if current_section == SECTION_HEADER:
         handle_input_key_enter_section_header()
     elif current_section == SECTION_PROCESS_TABLE:
-        handle_input_key_enter_section_table()
+        try:
+            handle_input_key_enter_section_table()
+        except Exception as e:
+            last_action_output = str(e)
+            init()
+            refresh()
 
 
 def handle_input_key_right():
