@@ -376,21 +376,22 @@ def draw_process_table_columns():
 def draw_process_table_content():
     if len(processes) > 0:
         display_processes = processes[process_table_scroll_offset:
-                                    process_table_scroll_offset + visible_processes_num]
+                                      process_table_scroll_offset + visible_processes_num]
         process_table_content_start_row = screen.current_draw_row_num
         for i, _ in enumerate(display_processes):
             draw_process_table_row(
                 process_table_content_start_row, i + process_table_scroll_offset)
+    else:
+        no_processes_message = "No Processes"
+        message_x = (screen.width - len(no_processes_message)) // 2
+        screen.addstr(screen.get_and_inc_current_draw_row_num(),
+                      message_x, no_processes_message)
 
-        return
-
-    no_processes_message = "No Processes"
-    message_x = (screen.width - len(no_processes_message)) // 2
-    screen.addstr(screen.get_and_inc_current_draw_row_num(),
-                  message_x, no_processes_message)
-
-    for _ in range(visible_processes_num - 1):
+    displayed_lines = len(display_processes) if len(processes) > 0 else 1
+    remaining_lines = visible_processes_num - displayed_lines
+    for _ in range(remaining_lines):
         screen.addstr(screen.get_and_inc_current_draw_row_num(), 0, "")
+
 
 
 def draw_process_table():
