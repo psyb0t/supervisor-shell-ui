@@ -1,14 +1,12 @@
-.PHONY: version build all
+.PHONY: build clean version license-headers remove-license-headers update-license-headers help
 
-all: license-headers version build
-
-build:
+build: ## Build the project
 	python setup.py sdist bdist_wheel
 
-clean:
+clean: ## Clean the build artifacts
 	rm -r ./build ./dist ./*.egg-info
 
-version:
+version: ## Update the version
 	@if [ "$(shell git rev-parse --abbrev-ref HEAD)" != "master" ]; then \
 		echo "You're not on the master branch."; \
 		exit 1; \
@@ -24,11 +22,14 @@ version:
 	git tag -a "$(TAG)"
 	git push origin "$(TAG)"
 
-license-headers:
+license-headers: ## Add license headers to files
 	./license_headers.py add
 
-remove-license-headers:
+remove-license-headers: ## Remove license headers from files
 	./license_headers.py remove
 
-update-license-headers:
+update-license-headers: ## Update license headers in files
 	./license_headers.py update
+
+help: ## Display this help message
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

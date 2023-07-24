@@ -44,11 +44,12 @@ def _get_file_lines(file):
 def add():
     for file in _get_files():
         lines = _get_file_lines(file)
-        if "\"\"\"LICENSE HEADER START" not in lines[0]:
+        is_empty = len(lines) == 0
+        if is_empty or "\"\"\"LICENSE HEADER START" not in lines[0]:
             print(f"Adding license header to {file}")
 
             with open(file, 'w') as f:
-                if lines[0].startswith("#!"):
+                if not is_empty and lines[0].startswith("#!"):
                     f.write(lines[0])
                     lines = lines[1:]
 
