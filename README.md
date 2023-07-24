@@ -1,6 +1,6 @@
 # supervisor-shell-ui
 
-[![ssh-tunnel-swarm](./assets/supervisor-shell-ui.png)](https://github.com/psyb0t/supervisor-shell-ui/blob/master/assets/supervisor-shell-ui.png)
+[![supervisor-shell-ui](./assets/supervisor-shell-ui.png)](https://github.com/psyb0t/supervisor-shell-ui/blob/master/assets/supervisor-shell-ui.png)
 
 supervisor-shell-ui is a command-line interface (CLI) for managing processes using the Supervisor program. Supervisor is a client/server system that allows its users to monitor and control a number of processes on UNIX-like operating systems. This tool provides an alternative to the built-in web interface of Supervisor, offering a more convenient way to manage processes directly from the terminal.
 
