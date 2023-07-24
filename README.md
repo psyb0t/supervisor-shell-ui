@@ -33,7 +33,7 @@ supervisor-shell-ui is a command-line interface (CLI) for managing processes usi
 
 ### Install from PyPI
 
-```
+```bash
 pip install supervisor-shell-ui
 ```
 
@@ -61,20 +61,20 @@ Both ways will achieve the same result, installing the supervisor-shell-ui packa
 
 First, download the `.tar.gz` file from the GitHub [releases page](https://github.com/psyb0t/supervisor-shell-ui/releases). Then extract it and navigate to the extracted directory:
 
-```
+```bash
 tar -xvzf supervisor-shell-ui.tar.gz
 cd supervisor-shell-ui
 ```
 
 Install using pip:
 
-```
+```bash
 pip install .
 ```
 
 Alternatively, you can also use the `setup.py` file:
 
-```
+```bash
 python setup.py install
 ```
 
@@ -82,7 +82,7 @@ python setup.py install
 
 After installing, you can run the application with the following command:
 
-```
+```bash
 supervisor-shell-ui
 ```
 
