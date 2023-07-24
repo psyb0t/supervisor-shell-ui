@@ -8,7 +8,7 @@ setup(
     version='v0.0.0',
     author='Ciprian Mandache',
     author_email='psyb0t@51k.eu',
-    description='A command-line alternative to the built-in web interface of Supervisor, a system for controlling processes, to manage them more conveniently.',
+    description='A CLI alternative to the built-in web interface of Supervisor, offering a more convenient way to manage processes directly from the terminal.',
     long_description=long_description,
     long_description_content_type="text/markdown",
     python_requires='>=3.6',
