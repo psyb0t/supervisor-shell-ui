@@ -86,6 +86,10 @@ After installing, you can run the application with the following command:
 supervisor-shell-ui
 ```
 
+### Environment variables
+
+- **SUPERVISOR_SOCK_PATH**: Defines the location of the supervisor sock file. Default is `/tmp/supervisor.sock`. If you're not sure where the sock file is try looking in the `supervisord.conf` usually located at `/etc/supervisor/supervisord.conf`.
+
 ### Keybindings
 
 - **Esc**: Exit Page
@@ -99,7 +103,6 @@ supervisor-shell-ui
 
 - This application is intended for use on UNIX-like operating systems.
 - The application requires that the Supervisor program is already installed and properly configured on your system.
-- supervisor-shell-ui relies on `supervisorctl` under the hood. In order to run it from a non-root user, you will need to set appropriate permissions for the `supervisor.sock` file in the supervisor configuration.
 
 ## License
 

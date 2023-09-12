@@ -22,10 +22,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 LICENSE HEADER STOP"""
 from datetime import datetime
 
-from . import common
-from . import config
-from . import screen
-from . import keys
+from supervisor_shell_ui import common
+from supervisor_shell_ui import config
+from supervisor_shell_ui import screen
+from supervisor_shell_ui import keys
 
 KEYBINDINGS_HELP = [
     "Esc: Exit Page",

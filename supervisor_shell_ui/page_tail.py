@@ -24,11 +24,11 @@ import curses
 import time
 import textwrap
 
-from . import common
-from . import keys
-from . import supervisor
-from . import screen
-from . import page
+from supervisor_shell_ui import common
+from supervisor_shell_ui import keys
+from supervisor_shell_ui import supervisor
+from supervisor_shell_ui import screen
+from supervisor_shell_ui import page
 
 PAGE_TITLE = "Tail"
 PAGE_BUTTON_REFRESH = 0

@@ -20,4 +20,11 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 LICENSE HEADER STOP"""
+import os
+
+SUPERVISOR_SOCK_PATH_ENV_VAR_NAME = "SUPERVISOR_SOCK_PATH"
 APP_TITLE = "Supervisor Shell UI"
+SUPERVISOR_SOCK_PATH = "/tmp/supervisor.sock"
+
+if os.getenv(SUPERVISOR_SOCK_PATH_ENV_VAR_NAME):
+    SUPERVISOR_SOCK_PATH = os.getenv(SUPERVISOR_SOCK_PATH_ENV_VAR_NAME)

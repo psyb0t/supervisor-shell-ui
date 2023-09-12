@@ -24,8 +24,8 @@ import sys
 import curses
 import signal
 
-from . import screen
-from . import page_main
+from supervisor_shell_ui import screen
+from supervisor_shell_ui import page_main
 
 
 def shutdown_handler(signal, frame):

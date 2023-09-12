@@ -24,12 +24,12 @@ import time
 import curses
 
 from datetime import datetime
-from . import common
-from . import supervisor
-from . import keys
-from . import screen
-from . import page
-from . import page_tail
+from supervisor_shell_ui import common
+from supervisor_shell_ui import supervisor
+from supervisor_shell_ui import keys
+from supervisor_shell_ui import screen
+from supervisor_shell_ui import page
+from supervisor_shell_ui import page_tail
 
 SECTION_HEADER = 0
 SECTION_PROCESS_TABLE = 1
