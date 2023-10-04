@@ -107,3 +107,7 @@ supervisor-shell-ui
 ## License
 
 This project is licensed under the terms of the GPL-3.0 license.
+
+## TODO
+
+- add support for authenticated RPC
