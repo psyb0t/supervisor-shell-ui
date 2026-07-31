@@ -4,3 +4,6 @@ venv
 
 # Local tooling scratch
 .telemetry/
+
+# setuptools build metadata, regenerated on every build
+*.egg-info/
