@@ -1,3 +1,6 @@
 __pycache__
 .vscode
 venv
+
+# Local tooling scratch
+.telemetry/
