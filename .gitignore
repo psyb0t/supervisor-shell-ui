@@ -2,6 +2,9 @@ __pycache__
 .vscode
 venv
 
+# Release tooling, written per release and never committed
+git-update.sh
+
 # Local tooling scratch
 .telemetry/
 
